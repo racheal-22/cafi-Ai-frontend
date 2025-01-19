@@ -1,0 +1,285 @@
+/* Tailwind CSS Setup */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom Global Styles */
+body {
+  @apply bg-black text-white font-sans; /* Ensure the body has a black background */
+}
+
+
+
+/* Custom Green Glow Effect */
+.green-glow {
+  background: radial-gradient(circle,rgba(34, 197, 94, 1)0%, rgba(34, 197, 94, 0) 70%); /* Even lighter green */
+  opacity: 0.15; /* Further reduce opacity for a very soft glow */
+  width: 900px; /* Size of the circular glow */
+  height: 900px; /* Size of the circular glow */
+  border-radius: 80%; /* Keep it a circle */
+  position: absolute;
+  top: 50%; /* Move the glow down slightly */
+  left: 50%; /* Keep it horizontally centered */
+  transform: translate(-50%, -50%); /* Exact centering of the circle */
+  z-index: 1; /* Place behind content */
+}
+
+
+/* Video Container (Positioned Above the Green Glow) */
+.video-container {
+  position: relative;
+  z-index: 10; /* Keep the video container above the green glow */
+}
+
+
+header {
+  @apply bg-black text-white flex justify-center items-center px-6;
+}
+
+nav {
+  @apply flex items-center space-x-4;
+}
+
+nav a {
+  @apply text-white text-xs font-medium transition-colors;
+}
+
+nav a:hover {
+  @apply text-green-500;
+}
+
+/* Style for Login Button */
+nav a:last-child button {
+  @apply bg-green-600 text-white px-3 py-1 rounded-md;
+}
+
+nav a:last-child button:hover {
+  @apply bg-green-700;
+}
+
+img {
+  @apply w-6 h-6;
+}
+
+h1 {
+  @apply text-lg font-bold text-green-500;
+}
+
+section {
+  @apply px-4 md:px-16 lg:px-24 bg-black; /* Ensuring sections have black background */
+}
+
+footer {
+  @apply bg-black text-gray-400; /* Ensuring footer has black background */
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Card Styling */
+.card {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  flex: 1;
+  
+}
+
+/* Card Titles */
+.card-title {
+  font-size: 1rem;
+  
+  color: white;
+  margin-bottom: 10px;
+}
+/* Candidate Block Layout */
+.candidate-block {
+  display: flex;
+  flex-direction: column;  /* Stack the candidates in one column */
+  gap: 5px; /* Further reduced gap between blocks */
+}
+
+/* Candidate Styling */
+.candidate {
+  background-color: #243447;
+  padding: 3px;  /* Further reduced padding */
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  min-height: 50px;  /* Further reduced block height */
+}
+
+/* Candidate Info Styling */
+.candidate-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;  /* Further reduced gap between image and text */
+}
+
+/* Candidate Image */
+.candidate-img {
+  width: 25px;  /* Reduced image size */
+  height: 25px;  /* Reduced image size */
+  border-radius: 50%;
+}
+
+/* Candidate Name Styling */
+.candidate-name {
+  font-size: 0.7rem;  /* Further reduced font size */
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Candidate Detail Styling */
+.candidate-detail {
+  font-size: 0.6rem;  /* Further reduced font size */
+  color: #a3a3a3;
+  margin: 0;
+}
+
+/* Progress Circle */
+.progress-circle {
+  position: relative;
+  width: 30px;  /* Further reduced size */
+  height: 30px;  /* Further reduced size */
+  margin-left: 5px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #22c55e 0% calc(var(--percentage) * 1%),
+    #1e293b calc(var(--percentage) * 1%) 100%
+  );
+}
+
+.progress-circle::after {
+  content: attr(data-percentage) '%';
+  position: absolute;
+  font-size: 8px;  /* Further reduced font size */
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  
+  margin-bottom: 10px;
+}
+
+/* Performance Graph */
+.performance-graph {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+/* Performance Bar Row */
+.performance-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Performance Bar */
+.performance-bar {
+  height: 10px;
+  background-color: #375f38;
+  flex-grow: 1;
+}
+
+/* Performance Percentage */
+.performance-percentage {
+  font-size: 0.8rem;
+  color: white;
+}
+
+/* Voice Simulation Section */
+.voice-simulation-section {
+  margin-top: 20px;
+}
+
+
+
+
+
+/* Text Alignment */
+.card p {
+  margin: 0;
+}
+
+
+.card-description {
+  @apply text-sm text-gray-300;
+}
+
+
+button {
+  @apply text-white rounded-lg px-8 py-1;
+}
+
+button:hover {
+  @apply bg-green-700;
+}
+
+/* Container with Border */
+/* Container with Border */
+.container-bordered {
+  @apply border border-green-950 rounded-lg;
+  @apply max-w-4xl; /* Control the width */
+  @apply flex; /* Ensuring content is flexed inside the container */
+}
+
+
+/* Button Styling */
+.btn-primary {
+  @apply px-5 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors;
+}
+
+
+/* Global Styles for Footer */
+footer {
+  background-color: #000; /* Tailwind uses bg-black */
+  color: #fff; /* Tailwind uses text-white */
+  padding: 2rem; /* Tailwind uses py-8 */
+}
+
+footer h4 {
+  font-weight: 500; /* Tailwind uses font-semibold */
+}
+
+footer ul {
+  list-style-type: none; /* Tailwind uses list-none */
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  font-size: 0.875rem; /* Tailwind uses text-sm */
+}
+
+footer .text-green-400 {
+  color: #10b981; /* Tailwind uses text-green-500 */
+}
+
+footer .container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+
