@@ -1,12 +1,14 @@
 import Image from 'next/image';
+import Link from 'next/link';
+
+
 
 export default function Home() {
   return (
-    
-    <div>
+   <div>
       
       {/* Hero Section */}
-      <section className="text-center py-14 bg-black relative">
+      <section id="home" className="text-center py-14 bg-black relative">
       <div className="absolute inset-0 flex justify-center items-center">
           <div className="green-glow"></div>
         </div>
@@ -16,12 +18,11 @@ export default function Home() {
          
         <p className="text-xl mt-3 text-gray-400">Automate your interview process with cafi AI</p>
         <div className="mt-8">
-          <button className="px-3 py-1 bg-green-600 text-white rounded-lg mx-2 hover:bg-green-700 transition-colors">
+          <a href="/signin"><button className="px-3 py-1 bg-green-600 text-white rounded-lg mx-2 hover:bg-green-700 transition-colors">
             Get Started
           </button>
-          <button className="px-3 py-1 bg-transparent border border-green-300 text-white rounded-lg mx-2 hover:bg-green-800 transition-colors">
-            Login
-          </button>
+          </a>
+          
         </div>
 
         {/* Video Container */}
@@ -34,8 +35,8 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-<section className="py-20 bg-black">
-  <h3 className="text-center text-3xl font-bold mb-10 text-white">
+        <section id="features" className="py-20 bg-black">
+          <h3 className="text-center text-3xl font-bold mb-10 text-white">
     Revolutionizing Recruitment with <span className="text-green-500">AI</span>
   </h3>
   <div className="card-container">
@@ -149,36 +150,58 @@ export default function Home() {
 </section>
 
 
-    {/* Why Use Section */}
-    <section className="py-20 bg-black">
-        <h3 className="text-center text-3xl font-bold mb-10 text-white">Why should you use cafi?</h3>
-        <div className="flex justify-center gap-8">
-          {/* For Students */}
-          <div className="w-1/3 bg-gray-800 p-6 rounded-lg">
-            <h4 className="text-xl font-bold mb-4 text-white">For Students</h4>
-            <ul className="list-disc ml-6 text-white space-y-2">
-              <li>Practice interviews with AI simulation</li>
-              <li>Receive personalized feedback</li>
-              <li>Explore a range of scenarios</li>
-            </ul>
-            <button className="mt-6 px-24 py-1 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-              Start Practicing
-            </button>
-          </div>
-          {/* For Companies */}
-          <div className="w-1/3 bg-gray-800 p-6 rounded-lg">
-            <h4 className="text-xl font-bold  mb-4 text-white">For Companies</h4>
-            <ul className="list-disc ml-6 text-white space-y-2">
-              <li>Automate initial interview rounds</li>
-              <li>Ensure consistency in evaluations</li>
-              <li>Gain valuable hiring insights</li>
-            </ul>
-            <button className="mt-6 px-20 py-1 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-              Schedule a Demo
-            </button>
-          </div>
-        </div>
-      </section>
+   {/* Why Use Section */}
+<section className="py-20 bg-black">
+  <h3 className="text-center text-3xl font-bold mb-10 text-white">
+    Why should you use <span className="text-green-500">cafi</span>?
+  </h3>
+  <div className="flex justify-center gap-8">
+    {/* For Students */}
+    <div className="w-1/3 bg-[#1c1c1c] p-8 rounded-lg shadow-lg">
+      <h4 className="text-xl font-bold mb-4 text-white">For Students</h4>
+      <ul className="text-white space-y-4">
+        <li className="flex items-center">
+          <span className="text-green-500 mr-2">✔</span>
+          Practice interviews anytime, anywhere with AI
+        </li>
+        <li className="flex items-center">
+          <span className="text-green-500 mr-2">✔</span>
+          Receive personalized feedback to improve your performance
+        </li>
+        <li className="flex items-center">
+          <span className="text-green-500 mr-2">✔</span>
+          Experience various interview scenarios
+        </li>
+      </ul>
+      <button className="mt-6 px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors w-full text-center">
+        Start Practicing
+      </button>
+    </div>
+
+    {/* For Companies */}
+    <div className="w-1/3 bg-[#1c1c1c] p-8 rounded-lg shadow-lg">
+      <h4 className="text-xl font-bold mb-4 text-white">For Companies</h4>
+      <ul className="text-white space-y-4">
+        <li className="flex items-center">
+          <span className="text-green-500 mr-2">✔</span>
+          Save time by automating initial interview rounds
+        </li>
+        <li className="flex items-center">
+          <span className="text-green-500 mr-2">✔</span>
+          Ensure consistent and unbiased evaluation of candidates
+        </li>
+        <li className="flex items-center">
+          <span className="text-green-500 mr-2">✔</span>
+          Gain valuable insights and analytics on candidate performance
+        </li>
+      </ul>
+      <button className="mt-6 px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors w-full text-center">
+        Schedule a Demo
+      </button>
+    </div>
+  </div>
+</section>
+
 
    
     <section className="text-center mt-8 mb-8">
@@ -211,5 +234,6 @@ export default function Home() {
         </div>
       </section>
     </div>
+    
   );
 }

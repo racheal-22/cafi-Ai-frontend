@@ -3,33 +3,33 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* Custom Global Styles */
-body {
-  @apply bg-black text-white font-sans; /* Ensure the body has a black background */
+html {
+  scroll-behavior: smooth;
 }
 
-
+body {
+  @apply bg-black text-white font-sans; 
+}
 
 /* Custom Green Glow Effect */
 .green-glow {
   background: radial-gradient(circle,rgba(34, 197, 94, 1)0%, rgba(34, 197, 94, 0) 70%); /* Even lighter green */
-  opacity: 0.15; /* Further reduce opacity for a very soft glow */
-  width: 900px; /* Size of the circular glow */
-  height: 900px; /* Size of the circular glow */
-  border-radius: 80%; /* Keep it a circle */
+  opacity: 0.15; 
+  width: 900px; 
+  height: 900px; 
+  border-radius: 80%; 
   position: absolute;
-  top: 50%; /* Move the glow down slightly */
-  left: 50%; /* Keep it horizontally centered */
-  transform: translate(-50%, -50%); /* Exact centering of the circle */
-  z-index: 1; /* Place behind content */
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
 }
 
 
-/* Video Container (Positioned Above the Green Glow) */
+/* Video Container */
 .video-container {
   position: relative;
-  z-index: 10; /* Keep the video container above the green glow */
+  z-index: 10; 
 }
 
 
@@ -67,11 +67,11 @@ h1 {
 }
 
 section {
-  @apply px-4 md:px-16 lg:px-24 bg-black; /* Ensuring sections have black background */
+  @apply px-4 md:px-16 lg:px-24 bg-black; 
 }
 
 footer {
-  @apply bg-black text-gray-400; /* Ensuring footer has black background */
+  @apply bg-black text-gray-400; 
 }
 
 /* Card Container */
@@ -98,58 +98,67 @@ footer {
   color: white;
   margin-bottom: 10px;
 }
+
 /* Candidate Block Layout */
 .candidate-block {
   display: flex;
   flex-direction: column;  /* Stack the candidates in one column */
-  gap: 5px; /* Further reduced gap between blocks */
+  gap: 5px; 
 }
+
+
 
 /* Candidate Styling */
 .candidate {
   background-color: #243447;
-  padding: 3px;  /* Further reduced padding */
+  padding: 3px;  
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex: 1;
-  min-height: 50px;  /* Further reduced block height */
+  min-height: 50px; 
 }
+
 
 /* Candidate Info Styling */
 .candidate-info {
   display: flex;
   align-items: center;
-  gap: 5px;  /* Further reduced gap between image and text */
+  gap: 5px;  
 }
+
 
 /* Candidate Image */
 .candidate-img {
-  width: 25px;  /* Reduced image size */
-  height: 25px;  /* Reduced image size */
+  width: 25px;  
+  height: 25px;  
   border-radius: 50%;
 }
 
+
 /* Candidate Name Styling */
 .candidate-name {
-  font-size: 0.7rem;  /* Further reduced font size */
+  font-size: 0.7rem;  
   font-weight: bold;
   margin: 0;
 }
 
+
 /* Candidate Detail Styling */
 .candidate-detail {
-  font-size: 0.6rem;  /* Further reduced font size */
+  font-size: 0.6rem;  
   color: #a3a3a3;
   margin: 0;
 }
 
+
+
 /* Progress Circle */
 .progress-circle {
   position: relative;
-  width: 30px;  /* Further reduced size */
-  height: 30px;  /* Further reduced size */
+  width: 30px;  
+  height: 30px; 
   margin-left: 5px;
   border-radius: 50%;
   background: conic-gradient(
@@ -158,10 +167,12 @@ footer {
   );
 }
 
+
+
 .progress-circle::after {
   content: attr(data-percentage) '%';
   position: absolute;
-  font-size: 8px;  /* Further reduced font size */
+  font-size: 8px;  
   font-weight: bold;
   top: 50%;
   left: 50%;
@@ -212,9 +223,6 @@ footer {
 }
 
 
-
-
-
 /* Text Alignment */
 .card p {
   margin: 0;
@@ -234,7 +242,7 @@ button:hover {
   @apply bg-green-700;
 }
 
-/* Container with Border */
+
 /* Container with Border */
 .container-bordered {
   @apply border border-green-950 rounded-lg;
