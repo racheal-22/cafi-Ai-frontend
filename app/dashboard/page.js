@@ -1,11 +1,9 @@
-// app/dashboard/page.js
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 export default function DashboardPage() {
   const { userId } = auth();
 
-  // Redirect to sign-in page if the user is not authenticated
   if (!userId) {
     redirect("/signin");
   }

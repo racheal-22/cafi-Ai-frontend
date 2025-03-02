@@ -5,7 +5,8 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-   <div>
+
+    <div>
       
       {/* Hero Section */}
       <section id="home" className="text-center py-14 bg-black relative">
@@ -34,118 +35,126 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-        <section id="features" className="py-20 bg-black">
-          <h3 className="text-center text-3xl font-bold mb-10 text-white">
+ {/* Features Section */}
+<section id="features" className="py-20 bg-black">
+  <h3 className="text-center text-3xl font-bold mb-10 text-white">
     Revolutionizing Recruitment with <span className="text-green-500">AI</span>
   </h3>
-  <div className="card-container">
-   {/* Card 1 */}
-<div className="card">
-  <h4 className="card-title font-bold">Find the Best Candidate</h4>
- 
-  <div className="candidate-block">
-    {/* Candidate 1 */}
-    <div className="candidate">
-      <div className="candidate-info">
-        <img src="joe-doe.png" alt="John Doe" className="candidate-img" />
-        <div>
-          <p className="candidate-name">John Doe</p>
-          <p className="candidate-detail">Software Engineer</p>
+  <div className="flex justify-between gap-8 px-4">
+    {/* Card 1: Find the Best Candidate */}
+    <div className="w-1/3 bg-[#1c1c1c] p-6 rounded-lg shadow-lg">
+      <h4 className="text-xl font-bold mb-4 text-white">Find the Best Candidate</h4>
+      <p className="text-gray-400 text-sm mb-6">
+        Identify top-tier talent faster with AI that analyzes skills, culture fit, and potential.
+      </p>
+      <div className="space-y-4">
+        {/* Candidate 1 */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <img src="/joe-doe.png" alt="John Doe" className="w-10 h-10 rounded-full" />
+            <div>
+              <p className="text-white font-medium">John Doe</p>
+              <p className="text-gray-400 text-sm">Software Engineer</p>
+            </div>
+          </div>
+          <div className="w-10 h-10 rounded-full flex items-center justify-center bg-green-600 text-white text-sm">
+            85%
+          </div>
+        </div>
+        {/* Candidate 2 */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <img src="/lisa-harrington.png" alt="Lisa Harrington" className="w-10 h-10 rounded-full" />
+            <div>
+              <p className="text-white font-medium">Lisa Harrington</p>
+              <p className="text-gray-400 text-sm">Data Scientist</p>
+            </div>
+          </div>
+          <div className="w-10 h-10 rounded-full flex items-center justify-center bg-green-600 text-white text-sm">
+            75%
+          </div>
+        </div>
+        {/* Candidate 3 */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <img src="/mike.png" alt="Mike Sanders" className="w-10 h-10 rounded-full" />
+            <div>
+              <p className="text-white font-medium">Mike Sanders</p>
+              <p className="text-gray-400 text-sm">Product Manager</p>
+            </div>
+          </div>
+          <div className="w-10 h-10 rounded-full flex items-center justify-center bg-green-600 text-white text-sm">
+            90%
+          </div>
+        </div>
+        {/* Candidate 4 */}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <img src="/emily.png" alt="Emily Saldana" className="w-10 h-10 rounded-full" />
+            <div>
+              <p className="text-white font-medium">Emily Saldana</p>
+              <p className="text-gray-400 text-sm">Data Scientist</p>
+            </div>
+          </div>
+          <div className="w-10 h-10 rounded-full flex items-center justify-center bg-green-600 text-white text-sm">
+            65%
+          </div>
         </div>
       </div>
-      <div className="progress-circle" style={{ '--percentage': 85 }} data-percentage="85"></div>
     </div>
 
-    {/* Candidate 2 */}
-    <div className="candidate">
-      <div className="candidate-info">
-        <img src="lisa-harrington.png" alt="Lisa Harrington" className="candidate-img" />
-        <div>
-          <p className="candidate-name">Lisa Harrington</p>
-          <p className="candidate-detail">Data Scientist</p>
+    {/* Card 2: Performance */}
+    <div className="w-1/3 bg-[#1c1c1c] p-6 rounded-lg shadow-lg">
+      <h4 className="text-xl font-bold mb-4 text-white">Performance</h4>
+      <p className="text-gray-400 text-sm mb-6">
+        Our agents help in tracking performance through detailed metrics and insights.
+      </p>
+      <div className="space-y-4">
+        {/* Performance Bars */}
+        <div className="space-y-2">
+          <div className="flex items-center justify-between">
+            <span className="text-white text-sm">60%</span>
+            <div className="w-3/4 h-2 bg-gray-700 rounded-full">
+              <div className="h-full bg-green-600 rounded-full" style={{ width: '60%' }}></div>
+            </div>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-white text-sm">70%</span>
+            <div className="w-3/4 h-2 bg-gray-700 rounded-full">
+              <div className="h-full bg-green-600 rounded-full" style={{ width: '70%' }}></div>
+            </div>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-white text-sm">80%</span>
+            <div className="w-3/4 h-2 bg-gray-700 rounded-full">
+              <div className="h-full bg-green-600 rounded-full" style={{ width: '80%' }}></div>
+            </div>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-white text-sm">90%</span>
+            <div className="w-3/4 h-2 bg-gray-700 rounded-full">
+              <div className="h-full bg-green-600 rounded-full" style={{ width: '90%' }}></div>
+            </div>
+          </div>
+        </div>
+        {/* Live Simulation */}
+        <div className="mt-6">
+          <h4 className="text-lg font-bold text-white mb-2">Live Simulation</h4>
+          <p className="text-gray-400 text-sm">
+            Real-time interview simulation with voice feedback.
+          </p>
         </div>
       </div>
-      <div className="progress-circle" style={{ '--percentage': 75 }} data-percentage="75"></div>
     </div>
 
-    {/* Candidate 3 */}
-    <div className="candidate">
-      <div className="candidate-info">
-        <img src="mike.png" alt="Mike Sanders" className="candidate-img" />
-        <div>
-          <p className="candidate-name">Mike Sanders</p>
-          <p className="candidate-detail">Product Manager</p>
-        </div>
-      </div>
-      <div className="progress-circle" style={{ '--percentage': 90 }} data-percentage="90"></div>
+    {/* Card 3: Powerful APIs */}
+    <div className="w-1/3 bg-[#1c1c1c] p-6 rounded-lg shadow-lg">
+      <h4 className="text-xl font-bold mb-4 text-white">Powerful APIs</h4>
+      <p className="text-gray-400 text-sm mb-6">
+        Integrate seamlessly into your existing hiring tools and workflows.
+      </p>
+      
     </div>
-
-    {/* Candidate 4 */}
-    <div className="candidate">
-      <div className="candidate-info">
-        <img src="emily.png" alt="Emily Saldana" className="candidate-img" />
-        <div>
-          <p className="candidate-name">Emily Saldana</p>
-          <p className="candidate-detail">Data Scientist</p>
-        </div>
-      </div>
-      <div className="progress-circle" style={{ '--percentage': 65 }} data-percentage="65"></div>
-    </div>
-
-  </div>
-</div>
-
-    {/* Card 2 */}
-<div className="card">
-  <div className="card-header">
-    <h4 className="card-title font-bold">Performance</h4>
-    
-  </div>
-  <p className="text-gray-400 text-xs mt-2 mb-4">Our agents help in tracking performance through detailed metrics and insights.</p>
-
-  
-  <div className="performance-container">
-    {/* Performance Graph with Percentages */}
-    <div className="performance-graph">
-      <div className="performance-bar-row">
-        <div className="performance-bar" style={{ width: '60%' }}></div>
-        <span className="performance-percentage">60%</span>
-      </div>
-      <div className="performance-bar-row">
-        <div className="performance-bar" style={{ width: '70%' }}></div>
-        <span className="performance-percentage">70%</span>
-      </div>
-      <div className="performance-bar-row">
-        <div className="performance-bar" style={{ width: '80%' }}></div>
-        <span className="performance-percentage">80%</span>
-      </div>
-      <div className="performance-bar-row">
-        <div className="performance-bar" style={{ width: '90%' }}></div>
-        <span className="performance-percentage">90%</span>
-      </div>
-    </div>
-
-    {/* Live Simulation Section */}
-    <div className="voice-simulation-section ">
-      <h4 className=" font-bold text-white mb-2">Live Simulation</h4>
-      <p className="text-gray-400 text-xs">Real-time interview simulation with voice feedback.</p>
-  {/* Microphone Icon in the center */}
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-    {/* Card 3 */}
-    <div className="card">
-      <h4 className="card-title font-bold">Powerful APIs</h4>
-      <p>Integrate seamlessly into your existing hiring tools and workflows.</p>
-    </div>
-    
   </div>
 </section>
 
